@@ -10,21 +10,3 @@ This system allows adding, updating, deleting, and viewing customer details effi
 - Delete customer data  
 
 ## 📸 Screenshots
-
-### Customer List Page
-![Customer List](screenshots/customer-list.png)
-
-### Add Customer Form
-![Add Customer](screenshots/add-customer.png)
-
-### Edit Customer Form
-![Edit Customer](screenshots/edit-customer.png)
-
-### Customer Details
-![Customer Details](screenshots/customer-details.png)
-
-### Print View (Single Customer)
-![Print Single](screenshots/print-single.png)
-
-### Print View (Full Table)
-![Print Full Table](screenshots/print-full.png)
