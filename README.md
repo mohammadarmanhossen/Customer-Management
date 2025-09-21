@@ -15,7 +15,7 @@ This system allows adding, updating, deleting, and viewing customer details effi
 ## Design Screenshots
 
 ### Customer List Page
-![Customer List Page](./design/customer-list.png)
+![Customer List Page](./design/Screenshot 1.jpg)
 
 ### Add Customer Form
 ![Add Customer Form](./design/add-customer-form.png)
