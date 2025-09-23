@@ -1,0 +1,229 @@
+<div class="container mt-5 mb-10">
+  <!-- Customer Table -->
+  <div class="card shadow p-4">
+    <h4 class="text-center mb-4">CUSTOMER MANAGEMENT SYSTEM</h4>
+    <div class="card-body">
+      <!-- Action Buttons -->
+      @if (!loading) {
+      <div class="d-flex flex-wrap justify-content-end gap-2 mb-3 mt-3">
+        <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addCustomerModal">
+          Add Customer
+        </button>
+        <button class="btn btn-dark" (click)="exportAllCustomersPDF()">Table PDF Download</button>
+      </div>
+      } @if(loading) {
+      <div class="flex items-center justify-center h-screen center_loading">
+        <h5 class="text-2xl font-semibold text-gray-700">Loading Customers...</h5>
+      </div>
+      }@else {
+      <div class="table-responsive">
+        <table class="table table-bordered table-hover align-middle text-center">
+          <thead class="table-dark">
+            <tr>
+              <th>#</th>
+              <th>First</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Address</th>
+              <th>Amount</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (c of customer$; track $index) {
+            <tr>
+              <td>{{ $index + 1 }}</td>
+              <td>{{ c.name }}</td>
+              <td>{{ c.email }}</td>
+              <td>{{ c.phone_number }}</td>
+              <td>{{ c.address }}</td>
+              <td>{{ c.amount }} Tk</td>
+              <td>
+                <div class="d-flex flex-wrap justify-content-center gap-1">
+                  <button
+                    class="btn btn-primary btn-sm"
+                    data-bs-toggle="modal"
+                    data-bs-target="#editCustomerModal"
+                    (click)="openEdit(c)"
+                  >
+                    Edit
+                  </button>
+
+                  <button
+                    class="btn btn-info btn-sm"
+                    data-bs-toggle="modal"
+                    data-bs-target="#infoCustomerModal"
+                    (click)="openInfo(c)"
+                  >
+                    View
+                  </button>
+
+                  <button class="btn btn-warning btn-sm" (click)="exportCustomerPDF(c)">
+                    Download PDF
+                  </button>
+
+                  <button class="btn btn-danger btn-sm" (click)="deleteCustomer(c.id)">
+                    Delete
+                  </button>
+                </div>
+              </td>
+            </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+
+      }
+
+      <div class="d-flex justify-content-center mt-3">
+        <h6 class="fw-bold">TOTAL AMOUNT : {{ !loading ? totalAmount : 'loading...' }} Tk</h6>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Add Customer Modal -->
+<div class="modal fade" id="addCustomerModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white justify-content-center">
+        <h5 class="modal-title">Add New Customer</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <form class="row g-3">
+          <div class="col-md-6">
+            <label>Full Name</label>
+            <input
+              [(ngModel)]="newCustomer.name"
+              name="name"
+              class="form-control"
+              placeholder="Name"
+            />
+          </div>
+          <div class="col-md-6">
+            <label>Email</label>
+            <input
+              [(ngModel)]="newCustomer.email"
+              name="email"
+              class="form-control"
+              placeholder="Email"
+            />
+          </div>
+          <div class="col-md-6">
+            <label>Phone</label>
+            <input
+              [(ngModel)]="newCustomer.phone_number"
+              name="phone_number"
+              class="form-control"
+              placeholder="Phone"
+            />
+          </div>
+          <div class="col-md-6">
+            <label>Address</label>
+            <input
+              [(ngModel)]="newCustomer.address"
+              name="address"
+              class="form-control"
+              placeholder="Address"
+            />
+          </div>
+          <div class="col-md-6">
+            <label>Amount</label>
+            <input
+              [(ngModel)]="newCustomer.amount"
+              name="amount"
+              class="form-control"
+              placeholder="Amount"
+            />
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button class="btn btn-success" (click)="addCustomer()">Save Customer</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Edit Customer Modal -->
+<div class="modal fade" id="editCustomerModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title">Edit Customer</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form class="row g-3">
+          <div class="col-md-6">
+            <label>Name</label>
+            <input [(ngModel)]="editCustomerModel.name" name="editName" class="form-control" />
+          </div>
+          <div class="col-md-6">
+            <label>Email</label>
+            <input [(ngModel)]="editCustomerModel.email" name="editEmail" class="form-control" />
+          </div>
+          <div class="col-md-6">
+            <label>Phone</label>
+            <input
+              [(ngModel)]="editCustomerModel.phone_number"
+              name="editPhone"
+              class="form-control"
+            />
+          </div>
+          <div class="col-md-6">
+            <label>Address</label>
+            <input
+              [(ngModel)]="editCustomerModel.address"
+              name="editAddress"
+              class="form-control"
+            />
+          </div>
+          <div class="col-md-6">
+            <label>Amount</label>
+            <input [(ngModel)]="editCustomerModel.amount" name="editAmount" class="form-control" />
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button class="btn btn-primary" (click)="updateCustomer()">Update Customer</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Info Customer Modal -->
+<div class="modal fade" id="infoCustomerModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-md">
+    <div class="modal-content" id="customerInfoModalContent">
+      <div class="modal-header bg-info text-white">
+        <h5 class="modal-title">Customer Info</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <ul class="list-group">
+          <li class="list-group-item"><strong>Name:</strong> {{ selectedCustomer?.name }}</li>
+          <li class="list-group-item"><strong>Email:</strong> {{ selectedCustomer?.email }}</li>
+          <li class="list-group-item">
+            <strong>Phone:</strong> {{ selectedCustomer?.phone_number }}
+          </li>
+          <li class="list-group-item">
+            <strong>Amount:</strong> {{ selectedCustomer?.amount }} Tk
+          </li>
+          <li class="list-group-item"><strong>Address:</strong> {{ selectedCustomer?.address }}</li>
+          <li class="list-group-item">
+            <strong>Created At:</strong> {{ selectedCustomer?.created_at }}
+          </li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button class="btn btn-warning" (click)="exportInfoModalToPDF()">Download PDF</button>
+      </div>
+    </div>
+  </div>
+</div>
