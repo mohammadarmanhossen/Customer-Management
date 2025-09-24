@@ -28,19 +28,19 @@ http://127.0.0.1:8000/
 # API Endpoints 
 Post Method
 ```
-POST /customer
+API/customer
 ```
 Get Method
 ```
-GET /customer
+API /customer
 ```
 Put Method
 ```
-PUT /customer/<id>
+API /customer/<id>
 ```
 Delete Method
 ```
-DELETE /customer/<id>
+API /customer/<id>
 ```
 
 
