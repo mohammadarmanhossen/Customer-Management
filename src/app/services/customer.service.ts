@@ -7,7 +7,7 @@ import { Customer } from '../../type';
   providedIn: 'root',
 })
 export class CustomerService {
-  private baseUrl = 'https://customer-management-5i7p.onrender.com/customer/';
+  private baseUrl = 'http://127.0.0.1:8000/customer/';
 
   constructor(private http: HttpClient) {}
 
