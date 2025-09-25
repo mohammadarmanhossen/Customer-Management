@@ -108,7 +108,4 @@ For more information on using the Angular CLI, including detailed command refere
 
 ![Customer Management Table View ](https://github.com/mohammadarmanhossen/Customer-Management/blob/cd9c866ff7ddee2c0f43c4d25adb7881327f0d73/Table-imges/Screenshot%202025-09-25%20122736.png)
 
-![Customer singel pdf View ](https://github.com/mohammadarmanhossen/Customer-Management/blob/cd9c866ff7ddee2c0f43c4d25adb7881327f0d73/Table-imges/Screenshot%202025-09-25%20122853.png)
-
-![Customer Management Full Table  View pdf](https://github.com/mohammadarmanhossen/Customer-Management/blob/cd9c866ff7ddee2c0f43c4d25adb7881327f0d73/Table-imges/Screenshot%202025-09-25%20122837.png)
 
