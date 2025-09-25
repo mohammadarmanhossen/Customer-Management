@@ -1,16 +1,5 @@
 # Customer Management Assignment 
-
-![Customer Management Full Table ](https://github.com/mohammadarmanhossen/Customer-Management/blob/ebb0ea0082727892f4993314518253567adb26f8/Table-imges/Screenshot%202025-09-25%20122649.png)
-
-![Customer Add Table ](https://github.com/mohammadarmanhossen/Customer-Management/blob/cd9c866ff7ddee2c0f43c4d25adb7881327f0d73/Table-imges/Screenshot%202025-09-25%20122715.png)
-
-![Customer Management Table Edit](https://github.com/mohammadarmanhossen/Customer-Management/blob/cd9c866ff7ddee2c0f43c4d25adb7881327f0d73/Table-imges/Screenshot%202025-09-25%20122750.png)
-
-![Customer Management Table View ](https://github.com/mohammadarmanhossen/Customer-Management/blob/cd9c866ff7ddee2c0f43c4d25adb7881327f0d73/Table-imges/Screenshot%202025-09-25%20122736.png)
-
-![Customer singel pdf View ](https://github.com/mohammadarmanhossen/Customer-Management/blob/cd9c866ff7ddee2c0f43c4d25adb7881327f0d73/Table-imges/Screenshot%202025-09-25%20122853.png)
-
-![Customer Management Full Table  View pdf](https://github.com/mohammadarmanhossen/Customer-Management/blob/cd9c866ff7ddee2c0f43c4d25adb7881327f0d73/Table-imges/Screenshot%202025-09-25%20122837.png)
+#This project frontend technology used angular and backend django and django rest frameworks database PostgreSQL.
 
 
 
@@ -73,3 +62,18 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+# Customer Management Assignment Table 
+
+![Customer Management Full Table ](https://github.com/mohammadarmanhossen/Customer-Management/blob/ebb0ea0082727892f4993314518253567adb26f8/Table-imges/Screenshot%202025-09-25%20122649.png)
+
+![Customer Add Table ](https://github.com/mohammadarmanhossen/Customer-Management/blob/cd9c866ff7ddee2c0f43c4d25adb7881327f0d73/Table-imges/Screenshot%202025-09-25%20122715.png)
+
+![Customer Management Table Edit](https://github.com/mohammadarmanhossen/Customer-Management/blob/cd9c866ff7ddee2c0f43c4d25adb7881327f0d73/Table-imges/Screenshot%202025-09-25%20122750.png)
+
+![Customer Management Table View ](https://github.com/mohammadarmanhossen/Customer-Management/blob/cd9c866ff7ddee2c0f43c4d25adb7881327f0d73/Table-imges/Screenshot%202025-09-25%20122736.png)
+
+![Customer singel pdf View ](https://github.com/mohammadarmanhossen/Customer-Management/blob/cd9c866ff7ddee2c0f43c4d25adb7881327f0d73/Table-imges/Screenshot%202025-09-25%20122853.png)
+
+![Customer Management Full Table  View pdf](https://github.com/mohammadarmanhossen/Customer-Management/blob/cd9c866ff7ddee2c0f43c4d25adb7881327f0d73/Table-imges/Screenshot%202025-09-25%20122837.png)
+
