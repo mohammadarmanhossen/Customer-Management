@@ -2,6 +2,18 @@
 
 ![Customer Management Full Table ](https://github.com/mohammadarmanhossen/Customer-Management/blob/ebb0ea0082727892f4993314518253567adb26f8/Table-imges/Screenshot%202025-09-25%20122649.png)
 
+![Customer Add Table ](https://github.com/mohammadarmanhossen/Customer-Management/blob/ebb0ea0082727892f4993314518253567adb26f8/Table-imges/Screenshot%202025-09-25%20122649.png)
+
+![Customer Management Table Edit](https://github.com/mohammadarmanhossen/Customer-Management/blob/ebb0ea0082727892f4993314518253567adb26f8/Table-imges/Screenshot%202025-09-25%20122649.png)
+
+![Customer Management Table View ](https://github.com/mohammadarmanhossen/Customer-Management/blob/ebb0ea0082727892f4993314518253567adb26f8/Table-imges/Screenshot%202025-09-25%20122649.png)
+
+![Customer singel pdf View ](https://github.com/mohammadarmanhossen/Customer-Management/blob/ebb0ea0082727892f4993314518253567adb26f8/Table-imges/Screenshot%202025-09-25%20122649.png)
+
+![Customer Management Full Table  View pdf](https://github.com/mohammadarmanhossen/Customer-Management/blob/ebb0ea0082727892f4993314518253567adb26f8/Table-imges/Screenshot%202025-09-25%20122649.png)
+
+
+
 # App
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.2.2.
